@@ -33,8 +33,8 @@ public class Pacote {
     // nessa relação, um endereço pode ter vários pacotes
     @ManyToOne
     private Endereco endereco;
-    private String status;
 
+    private String status;
 
     //Neste caso, um pacote pode ter vários rastreamentos
     @OneToMany
