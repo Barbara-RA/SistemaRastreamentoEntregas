@@ -18,12 +18,6 @@ public class RastreamentoController {
     @Autowired
     public RastreamentoService rastreamentoService;
 
-    // - POST /rastreamentos - Adiciona um novo rastreamento.
-    @PostMapping
-    public Rastreamento criar(@RequestBody Rastreamento rastreamento){
-        return rastreamentoService.criar(rastreamento);
-    }
-
     // - GET /rastreamentos/{id} - Consulta todos os rastreamentos de um pacote específico.
     @GetMapping("/{id}")
     public Rastreamento buscar(@PathVariable Long id){
