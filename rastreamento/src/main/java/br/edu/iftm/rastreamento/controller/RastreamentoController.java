@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,9 +26,9 @@ public class RastreamentoController {
     }
 
     // - GET /rastreamentos/{id} - Consulta todos os rastreamentos de um pacote específico.
-    @GetMapping
-    public List<Rastreamento> rastreamentos(){
-        return rastreamentoService.rastreamentos();
+    @GetMapping("/{id}")
+    public Rastreamento buscar(@PathVariable Long id){
+        return rastreamentoService.buscar(id);
     }
 
 }

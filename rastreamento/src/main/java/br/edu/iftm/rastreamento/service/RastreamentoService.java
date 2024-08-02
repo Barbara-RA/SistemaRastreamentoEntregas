@@ -10,10 +10,10 @@ public class RastreamentoService {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'criar'");
     }
-
-    public List<Rastreamento> rastreamentos() {
+    
+    public Rastreamento buscar(Long id) {
         // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'rastreamentos'");
+        throw new UnsupportedOperationException("Unimplemented method 'buscar'");
     }
 
     
