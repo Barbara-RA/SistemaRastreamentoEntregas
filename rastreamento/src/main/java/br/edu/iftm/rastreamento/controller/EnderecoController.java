@@ -12,7 +12,6 @@ import br.edu.iftm.rastreamento.service.EnderecoService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-
 @RestController
 @RequestMapping("/endereco")
 public class EnderecoController {
@@ -21,14 +20,14 @@ public class EnderecoController {
 
     // - GET /enderecos - Consulta todos os endereços.
     @GetMapping
-    public List<Endereco> enderecos(){
+    public List<Endereco> enderecos() {
         return enderecoService.enderecos();
     }
 
     // - POST /enderecos - Adiciona um novo endereço.
     @PostMapping
-    public Endereco criar(@RequestBody Endereco endereco) {   
+    public Endereco criar(@RequestBody Endereco endereco) {
         return enderecoService.criar(endereco);
     }
-    
+
 }

@@ -2,24 +2,24 @@ package br.edu.iftm.rastreamento.service;
 
 import java.util.List;
 
-import br.edu.iftm.rastreamento.model.Endereco;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+import br.edu.iftm.rastreamento.model.Endereco;
+import br.edu.iftm.rastreamento.repository.EnderecoRepository;
+
+@Service
 public class EnderecoService {
 
-    public List<Endereco> enderecos() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'enderecos'");
-    }
+    @Autowired
+    public EnderecoRepository enderecoRepository;
 
-    
+    public List<Endereco> enderecos() {
+        return (List<Endereco>) enderecoRepository.findAll();
+    }
 
     public Endereco criar(Endereco endereco) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'criar'");
+        return enderecoRepository.save(endereco);
     }
-
-    
-
-    
 
 }

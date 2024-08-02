@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import br.edu.iftm.rastreamento.model.Endereco;
 
 @Repository
-public interface EdereçoRepository extends CrudRepository<Endereco, Long> {
-	
+public interface EnderecoRepository extends CrudRepository<Endereco, Long> {
+
 }

@@ -1,6 +1,5 @@
 package br.edu.iftm.rastreamento.controller;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,9 +15,10 @@ public class RastreamentoController {
     @Autowired
     public RastreamentoService rastreamentoService;
 
-    // - GET /rastreamentos/{id} - Consulta todos os rastreamentos de um pacote específico.
+    // - GET /rastreamentos/{id} - Consulta todos os rastreamentos de um pacote
+    // específico.
     @GetMapping("/{id}")
-    public Rastreamento buscar(@PathVariable Long id){
+    public Rastreamento buscar(@PathVariable Long id) {
         return rastreamentoService.buscar(id);
     }
 

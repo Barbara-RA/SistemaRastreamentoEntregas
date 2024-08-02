@@ -14,12 +14,6 @@ public class RastreamentoService {
     private RastreamentoRepository rastreamentoRepository;
     
     public Rastreamento buscar(Long id) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'buscar'");
+        return rastreamentoRepository.findById(id).get();
     }
-
-    
-
-   
-
 }

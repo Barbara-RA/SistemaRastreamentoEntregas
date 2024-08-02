@@ -2,33 +2,36 @@ package br.edu.iftm.rastreamento.service;
 
 import java.util.List;
 
-import br.edu.iftm.rastreamento.model.Pacote;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+import br.edu.iftm.rastreamento.model.Pacote;
+import br.edu.iftm.rastreamento.repository.PacoteRepository;
+
+@Service
 public class PacoteService {
+    @Autowired
+    public PacoteRepository pacoteRepository;
 
     public List<Pacote> pacotes() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'pacotes'");
+        return (List<Pacote>) pacoteRepository.findAll();
     }
 
     public Pacote criar(Pacote pacote) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'criar'");
+        return pacoteRepository.save(pacote);
     }
 
     public Pacote buscar(Long id) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'buscar'");
+        return pacoteRepository.findById(id).get();
     }
 
     public Pacote atualiza(Long id, Pacote pacote) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'atualiza'");
+        pacote.setId(id);
+        return pacoteRepository.save(pacote);
     }
 
     public void delete(Long id) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'delete'");
+        pacoteRepository.deleteById(id);
     }
 
 }

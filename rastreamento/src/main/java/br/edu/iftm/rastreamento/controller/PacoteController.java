@@ -18,38 +18,37 @@ import br.edu.iftm.rastreamento.service.PacoteService;
 @RestController
 @RequestMapping("/pacote")
 public class PacoteController {
-@Autowired
+    @Autowired
     public PacoteService pacoteService;
 
-//     - GET /pacotes - Consulta todos os pacotes.
+    // - GET /pacotes - Consulta todos os pacotes.
     @GetMapping
-    public List<Pacote> pacotes(){
+    public List<Pacote> pacotes() {
         return pacoteService.pacotes();
     }
 
-//    - POST /pacotes - Adiciona um novo pacote.
+    // - POST /pacotes - Adiciona um novo pacote.
     @PostMapping
-    public Pacote criar(@RequestBody Pacote pacote){
+    public Pacote criar(@RequestBody Pacote pacote) {
         return pacoteService.criar(pacote);
     }
 
-//    - GET /pacotes/{id} - Consulta um pacote específico.
+    // - GET /pacotes/{id} - Consulta um pacote específico.
     @GetMapping("/{id}")
-    public Pacote buscar(@PathVariable Long id){
+    public Pacote buscar(@PathVariable Long id) {
         return pacoteService.buscar(id);
     }
 
-//    - PUT /pacotes/{id} - Atualiza as informações de um pacote.
+    // - PUT /pacotes/{id} - Atualiza as informações de um pacote.
     @PutMapping("/{id}")
-        public Pacote atualiza(@PathVariable Long id, @RequestBody Pacote pacote){
-            return pacoteService.atualiza(id, pacote);
-        }
-
-//    - DELETE /pacotes/{id} - Remove um pacote.
-        @DeleteMapping("/{id}")
-    public void delete(@PathVariable Long id){
-        pacoteService.delete(id);
+    public Pacote atualiza(@PathVariable Long id, @RequestBody Pacote pacote) {
+        return pacoteService.atualiza(id, pacote);
     }
 
+    // - DELETE /pacotes/{id} - Remove um pacote.
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable Long id) {
+        pacoteService.delete(id);
+    }
 
 }

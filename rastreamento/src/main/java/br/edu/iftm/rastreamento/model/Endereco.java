@@ -24,9 +24,9 @@ public class Endereco {
     // - cidade: String
     // - estado: String
     // - cep: String
-    
+
     @Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String rua;
@@ -34,8 +34,5 @@ public class Endereco {
     private String cidade;
     private String estado;
     private String cep;
-    
-
-    
 
 }
