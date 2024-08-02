@@ -1,6 +1,5 @@
 package br.edu.iftm.rastreamento.service;
 
-import java.util.List;
 
 import br.edu.iftm.rastreamento.model.Rastreamento;
 
